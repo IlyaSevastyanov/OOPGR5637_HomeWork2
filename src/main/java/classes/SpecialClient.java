@@ -1,5 +1,8 @@
 package classes;
 
+/**
+ * Класс  описывает структуру особого клиента в магазине.Является потомком класса Actor.
+ */
 public class SpecialClient extends Actor {
     private int idVip;
 
@@ -24,13 +27,24 @@ public class SpecialClient extends Actor {
         super.isTakeOrder = isCreated;
 
     }
+
+
     public Actor getActor() {
         return this;
     }
+
+    /**
+     * Метод возвращает имя клиента
+     * @return имя клиента
+     */
     public String getName() {
         return super.name;
     }
 
+    /**
+     * Метод задает имя клиенту
+     * @param  name  задаваемое имя клиента
+     */
     @Override
     public void setName(String name) {
         super.name = name;

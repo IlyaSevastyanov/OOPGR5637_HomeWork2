@@ -1,10 +1,13 @@
 package classes;
 
+/**
+ * Класс описывает структуру  обычного клиента в магазине.Является потомком класса Actor.
+ */
 public class OrdinaryClient extends Actor {
+
     public OrdinaryClient(String name) {
         super(name);
     }
-
 
     public boolean isTakeOrder(){
         return  super.isTakeOrder;
@@ -14,6 +17,8 @@ public class OrdinaryClient extends Actor {
         return isMakeOrder;
 
     }
+
+
     public void setMakeOrder(boolean isCreated){
         super.isMakeOrder = isCreated;
 

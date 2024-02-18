@@ -1,5 +1,8 @@
 package classes;
 
+/**
+ * Клиентский класс, в котором идет запуск проекта
+ */
 public class Main {
     public static void main(String[] args) {
         Market magnit = new Market();
@@ -21,6 +24,7 @@ public class Main {
         magnit.acceptToMarket(client4);
         magnit.acceptToMarket(client5);
         magnit.update();
+        client2.ReturnOrder();
 
     }
 }

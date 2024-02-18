@@ -2,6 +2,10 @@ package classes;
 
 import interfaces.iActorBehaviour;
 
+/**
+ * Класс описывает структуру налогового инспектора
+ */
+
 public class TaxInspector  implements iActorBehaviour {
     private String name;
     private boolean isTakeOrder;
