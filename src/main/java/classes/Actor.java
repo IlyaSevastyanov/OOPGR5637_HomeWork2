@@ -8,7 +8,7 @@ import interfaces.iReturnOrder;
  * Класс описывает структуру абстрактного клиента
  */
 
-public abstract class Actor implements iActorBehaviour, iReturnOrder {
+public abstract class Actor implements iActorBehaviour {
     protected String name;
     protected boolean isTakeOrder; // флаг состояния - клиент получил заказ
     protected boolean isMakeOrder; // флаг состояния - клиент сделал заказ
@@ -28,15 +28,4 @@ public abstract class Actor implements iActorBehaviour, iReturnOrder {
      * @param  name  задаваемое имя клиента
      */
     public abstract void setName(String name);
-
-    /**
-     * Метод, реализующий отображение возврата заказа клиентом
-     */
-    @Override
-    public void ReturnOrder() {
-        if(isMakeOrder) {
-            System.out.println(getName() + " клиент вернул заказ");
-
-        }
-    }
 }

@@ -5,6 +5,7 @@ import java.util.List;
 import interfaces.iActorBehaviour;
 import interfaces.iMarketBehaviour;
 import interfaces.iQueueBehaviour;
+import interfaces.iReturnOrder;
 
 /**
  * Класс описывает работу магазина.
@@ -17,7 +18,7 @@ import interfaces.iQueueBehaviour;
  * - удалять клиента из очереди после получения заказа.
  * - фиксировать уход клиента из магазина.
  */
-public class Market implements iMarketBehaviour,iQueueBehaviour {
+public class Market implements iMarketBehaviour,iQueueBehaviour, iReturnOrder {
 
     private final List<iActorBehaviour> queue; // список ждя хранения клиентов
 
@@ -109,5 +110,13 @@ public class Market implements iMarketBehaviour,iQueueBehaviour {
         }
 
     }
+
+    @Override
+    public void ReturnOrder(iActorBehaviour actor) {
+            if (actor.isMakeOrder()) {
+                System.out.println(actor.getActor().getName() + " клиент вернул заказ");
+
+        }
     }
+}
 

@@ -24,7 +24,7 @@ public class Main {
         magnit.acceptToMarket(client4);
         magnit.acceptToMarket(client5);
         magnit.update();
-        client2.ReturnOrder();
+        magnit.ReturnOrder(client2);
 
     }
 }
